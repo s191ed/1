@@ -1,0 +1,190 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script src="https://realfive.xyz/js/antipaste.js"></script>
+    <script type="text/javascript">
+        document.onkeydown = function (e) {
+            if (event.keyCode == 123) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        }
+    </script>
+    
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="https://realfive.xyz/js\rythm.js"></script>
+        </head><body><div id="particles-js"></div>
+        <script type="text/javascript" src="https://realfive.xyz/js/particles.js"></script>
+        <script type="text/javascript" src="https://realfive.xyz/js/app.js"></script>
+        <title>RealFive</title>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <audio id="music" src="stay.mp3" autoplay="autoplay" loop="loop" onplaying="" volume = "0.1" style="display: none;"></audio>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="animate.css">
+        
+        
+        
+        
+        
+    
+    
+    
+        <video autoplay muted loop id="myVideo">
+            <source src="noire_night_v2.mp4" type="video/mp4">
+        </video>
+    
+        <div id="main" class="center">
+            <div id="overlay" onclick="music.play(); addStuff();"><span class="header center begin" id="status_text"><p class="text1">click to enter</p></span></div>
+        </div>
+        <script>
+            var audio = document.getElementById("music");
+            audio.volume = 0.65;
+            function handleAnimations() {
+                let animations = [
+                    ["bounce", "bounce"],
+                    ["flash", "flash"],
+                    ["pulse", "pulse"],
+                    ["shake", "shake"],
+                    ["headShake", "headShake"],
+                    ["swing", "swing"],
+                    ["tada", "tada"],
+                    ["wobble", "wobble"],
+                    ["jello", "jello"],
+                    ["heartBeat", "heartBeat"],
+                    ["bounceIn", "bounceIn"],
+                    ["bounceInDown", "bounceInUp"],
+                    ["bounceInLeft", "bounceInRight"],
+                    ["fadeIn", "fadeIn"],
+                    ["fadeInDown", "fadeInUp"],
+                    ["fadeInLeft", "fadeInRight"],
+                    ["flip", "flip"],
+                    ["flipInX", "flipInX"],
+                    ["flipInY", "flipInY"],
+                    ["rotateIn", "rotateIn"],
+                    ["rotateInDownLeft", "rotateInDownRight"],
+                    ["slideInDown", "slideInUp"],
+                    ["slideInLeft", "slideInRight"],
+                    ["zoomIn", "zoomIn"],
+                    ["zoomInDown", "zoomInUp"],
+                    ["zoomInLeft", "zoomInRight"],
+                    ["jackInTheBox", "jackInTheBox"],
+                ];
+    
+                var num = getRandomInt(animations.length);
+    
+                animateCSS('[name="top"]', animations[num][0], animationOver);
+                animateCSS('[name="bottom"]', animations[num][1], animationOver);
+                console.log("top: " + animations[num][0]);
+                console.log("bottom: " + animations[num][1]);
+            }
+    
+            function addStuff() {
+                at("main").innerHTML =
+                    `<h1 name="top"    id = "status_text" class="header animated"><a href="index.html">RealFive</a></h1>
+                    <p  name="bottom" id = "text2" class="seller">Amazon, Discord Booster, and DDoS Service etc.... </p>`;
+    
+                handleAnimations();
+            }
+    
+            function animateCSS(element, animationName, callback) {
+                const node = document.querySelector(element)
+                node.classList.add('animated', animationName)
+                node.classList.add('delay-2s')
+    
+                function handleAnimationEnd() {
+                    node.classList.remove('animated', animationName)
+                    node.removeEventListener('animationend', handleAnimationEnd)
+    
+                    if (typeof callback === 'function') callback()
+                }
+    
+                node.addEventListener('animationend', handleAnimationEnd)
+            }
+    
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * Math.floor(max));
+            }
+            var at = document.getElementById.bind(document);
+            window.addEventListener("DOMContentLoaded", () => {
+                at("status_text").innerHTML = "loading";
+    
+            });
+    
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    if (!window.music.paused) {
+                        addStuff();
+                        console.log("music already started");
+                        return;
+                    }
+                    at("status_text").innerHTML = "click to enter";
+                    at("status_text").classList.add("begin");
+    
+                }, 100);
+            });
+    
+            var temp = 0
+    
+            function animationOver() {
+                temp++;
+    
+                if (temp != 2)
+                    return;
+    
+                setTimeout(function () {
+                    console.log("animations over");
+                    var doc = document.getElementById("main");
+                    var inner = doc.innerHTML;
+    
+                    doc.innerHTML +=
+                        `<div class="textiboi">
+                        <a id="typElement"></a></div>
+                        <div class="textiboi">
+                        <a class="textiboi animated fadeIn"  href="https://realfive.xyz/">Shop</a>
+                        <a class="textiboi animated fadeIn"  href="https://www.youtube.com/watch?v=GcfV72uZwok">Showcase</a>
+                        <a class="textiboi animated fadeIn"  href="https://discord.gg/sjz89qRDqe">Discord</a>
+                        <a class="textiboi animated fadeIn"  href="https://discord.com/terms">ToS</a>`;
+                    console.log("running typewrite");
+                    indefiniteWrite();
+    
+                }, 550);
+    
+            }
+    
+            function indefiniteWrite() {
+                let strs = [
+                    "Real#5555",
+                    "Selling goodies",
+                    "Constant vouches",
+                    "RealFive #1",
+                    "RealFive means Real 5555 in discord you put #5555",
+                    "Buy today",
+                ];
+    
+                var num = getRandomInt(strs.length);
+    
+                console.log("writing " + strs[num]);
+    
+                var typElement = document.getElementById('typElement');
+    
+                var typewriter = new Typewriter(typElement, {
+                    loop: true
+                });
+    
+                typewriter.typeString(strs[num]).pauseFor(5000).deleteAll().pauseFor(100).callFunction(() => {
+                    typewriter.stop();
+                    indefiniteWrite();
+                }).start();
+            }
+        </script>
+    
+    
+    
+    </body></html>
